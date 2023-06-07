@@ -2,7 +2,7 @@
 use num_bigint::BigInt;
 use rzemi::RzemiImplementation;
 
-use crate::swist::SwistImplementation;
+use crate::{swist::SwistImplementation, zloto::ZlotoImplementation};
 
 mod rzemi;
 mod zloto;
@@ -14,12 +14,14 @@ trait MagicFunctions {
 }
 
 fn main() {
-
     println!("{}", RzemiImplementation::fib(6));
     println!("{}", RzemiImplementation::fac(5));
     println!("---------------------------------");
     println!("{}", SwistImplementation::fib(6));
     println!("{}", SwistImplementation::fac(5));
+    println!("---------------------------------");
+    println!("{}", ZlotoImplementation::fib(6));
+    println!("{}", ZlotoImplementation::fac(5));
 
     println!("---------------------------------");
     println!("{}", RzemiImplementation::fib(30));
@@ -27,4 +29,7 @@ fn main() {
     println!("---------------------------------");
     println!("{}", SwistImplementation::fib(30));
     println!("{}", SwistImplementation::fac(100));
+    println!("---------------------------------");
+    println!("{}", ZlotoImplementation::fib(30));
+    println!("{}", ZlotoImplementation::fac(100));
 }
