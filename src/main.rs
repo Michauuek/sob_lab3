@@ -35,8 +35,18 @@ fn main() {
     println!("{}", ZlotoImplementation::fac(100));
 
     println!("---------------------------------");
-    println!("{}", common::FaultTolerantMagicFunctions::fib(10));
-    println!("{}", common::FaultTolerantMagicFunctions::fac(10));
+    // iterate from -10 to 150 with stride 5 and calculate as below
+
+    for i in (1..=150).step_by(5) {
+        println!("---------------------------------");
+        println!("Calculating for {}", i);
+        println!("FIB:");
+        println!("{}", common::FaultTolerantMagicFunctions::fib(i));
+        println!("FAC:");
+        println!("{}", common::FaultTolerantMagicFunctions::fac(i));
+    }
+
+    
 
 
 }
