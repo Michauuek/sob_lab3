@@ -12,6 +12,7 @@ trait MagicFunctions {
 }
 
 fn main() {
-    let rzemi = RzemiImplementation;
-    RzemiImplementation::fac(2);
+
+    println!("{}", RzemiImplementation::fib(6));
+    println!("{}", RzemiImplementation::fac(5));
 }
