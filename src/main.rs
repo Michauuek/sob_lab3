@@ -15,29 +15,28 @@ trait MagicFunctions {
 }
 
 fn main() {
-    // println!("{}", RzemiImplementation::fib(6));
-    // println!("{}", RzemiImplementation::fac(5));
-    // println!("---------------------------------");
-    // println!("{}", SwistImplementation::fib(6));
-    // println!("{}", SwistImplementation::fac(5));
-    // println!("---------------------------------");
-    // println!("{}", ZlotoImplementation::fib(6));
-    // println!("{}", ZlotoImplementation::fac(5));
-
-    // println!("---------------------------------");
-    // println!("{}", RzemiImplementation::fib(30));
-    // println!("{}", RzemiImplementation::fac(100));
-    // println!("---------------------------------");
-    // println!("{}", SwistImplementation::fib(30));
-    // println!("{}", SwistImplementation::fac(100));
-    // println!("---------------------------------");
-    // println!("{}", ZlotoImplementation::fib(30));
-    // println!("{}", ZlotoImplementation::fac(100));
+    println!("{}", RzemiImplementation::fib(6));
+    println!("{}", RzemiImplementation::fac(5));
+    println!("---------------------------------");
+    println!("{}", SwistImplementation::fib(6));
+    println!("{}", SwistImplementation::fac(5));
+    println!("---------------------------------");
+    println!("{}", ZlotoImplementation::fib(6));
+    println!("{}", ZlotoImplementation::fac(5));
 
     println!("---------------------------------");
-    println!("{}", common::FaultTolerantMagicFunctions::fib(10));
+    println!("{}", RzemiImplementation::fib(30));
+    println!("{}", RzemiImplementation::fac(100));
+    println!("---------------------------------");
+    println!("{}", SwistImplementation::fib(30));
+    println!("{}", SwistImplementation::fac(100));
+    println!("---------------------------------");
+    println!("{}", ZlotoImplementation::fib(30));
+    println!("{}", ZlotoImplementation::fac(100));
 
-    return;
+    println!("---------------------------------");
+    println!("{}", common::FaultTolerantMagicFunctions::fib(1000));
+
     
     // iterate from -10 to 150 with stride 5 and calculate as below
 
@@ -49,8 +48,4 @@ fn main() {
         println!("FAC:");
         println!("{}", common::FaultTolerantMagicFunctions::fac(i));
     }
-
-    
-
-
 }
