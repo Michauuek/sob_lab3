@@ -15,26 +15,30 @@ trait MagicFunctions {
 }
 
 fn main() {
-    println!("{}", RzemiImplementation::fib(6));
-    println!("{}", RzemiImplementation::fac(5));
-    println!("---------------------------------");
-    println!("{}", SwistImplementation::fib(6));
-    println!("{}", SwistImplementation::fac(5));
-    println!("---------------------------------");
-    println!("{}", ZlotoImplementation::fib(6));
-    println!("{}", ZlotoImplementation::fac(5));
+    // println!("{}", RzemiImplementation::fib(6));
+    // println!("{}", RzemiImplementation::fac(5));
+    // println!("---------------------------------");
+    // println!("{}", SwistImplementation::fib(6));
+    // println!("{}", SwistImplementation::fac(5));
+    // println!("---------------------------------");
+    // println!("{}", ZlotoImplementation::fib(6));
+    // println!("{}", ZlotoImplementation::fac(5));
+
+    // println!("---------------------------------");
+    // println!("{}", RzemiImplementation::fib(30));
+    // println!("{}", RzemiImplementation::fac(100));
+    // println!("---------------------------------");
+    // println!("{}", SwistImplementation::fib(30));
+    // println!("{}", SwistImplementation::fac(100));
+    // println!("---------------------------------");
+    // println!("{}", ZlotoImplementation::fib(30));
+    // println!("{}", ZlotoImplementation::fac(100));
 
     println!("---------------------------------");
-    println!("{}", RzemiImplementation::fib(30));
-    println!("{}", RzemiImplementation::fac(100));
-    println!("---------------------------------");
-    println!("{}", SwistImplementation::fib(30));
-    println!("{}", SwistImplementation::fac(100));
-    println!("---------------------------------");
-    println!("{}", ZlotoImplementation::fib(30));
-    println!("{}", ZlotoImplementation::fac(100));
+    println!("{}", common::FaultTolerantMagicFunctions::fib(10));
 
-    println!("---------------------------------");
+    return;
+    
     // iterate from -10 to 150 with stride 5 and calculate as below
 
     for i in (1..=150).step_by(5) {
