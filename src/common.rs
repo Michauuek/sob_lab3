@@ -15,7 +15,7 @@ fn vote<const N: usize>(handles: [JoinHandle<BigInt>; N]) -> BigInt {
 
     for result in handles {
         let value = result.join().unwrap();
-        *counts.entry(value.clone()).or_insert(0) += 1;
+        *counts.entry(value).or_insert(0) += 1;
     }
 
     // Find the most common result
@@ -24,7 +24,7 @@ fn vote<const N: usize>(handles: [JoinHandle<BigInt>; N]) -> BigInt {
 
     match sorted_counts.len() {
         1 => sorted_counts[0].0.clone(),
-        n if n >= N => panic!("Rabini są niezdecydowani: {:?}", sorted_counts),
+        n if n > (N/2+1) => panic!("Rabini są niezdecydowani: {:?}", sorted_counts),
         _ => {
             println!("Warning: One of the implementations returned a different result: {:?}", sorted_counts);
             sorted_counts[0].0.clone()
