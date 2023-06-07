@@ -27,9 +27,7 @@ fn zlot_fac_benchmark(c: &mut Criterion) {
 }
 
 fn swist_fac_benchmark(c: &mut Criterion) {
-    c.bench_function("Swist fac(5)", |b| b.iter(|| SwistImplementation::fac(black_box(5))));
-    c.bench_function("Swist fac(10)", |b| b.iter(|| SwistImplementation::fac(black_box(10))));
-    c.bench_function("Swist fac(120)", |b| b.iter(|| SwistImplementation::fac(black_box(120))));
+    c.bench_function("Swist fac(30)", |b| b.iter(|| SwistImplementation::fac(black_box(30))));
     // Add more input sizes as needed
 }
 
