@@ -35,8 +35,8 @@ fn main() {
     println!("{}", ZlotoImplementation::fac(100));
 
     println!("---------------------------------");
-    println!("{}", common::FaultTolerantMagicFunctions::fib(10));
-    println!("{}", common::FaultTolerantMagicFunctions::fac(10));
+    println!("{}", common::FaultTolerantMagicFunctions::fib(100));
+    println!("{}", common::FaultTolerantMagicFunctions::fac(100));
 
 
 }
