@@ -7,6 +7,7 @@ use crate::{swist::SwistImplementation, zloto::ZlotoImplementation};
 mod rzemi;
 mod zloto;
 mod swist;
+mod common;
 
 trait MagicFunctions {
     fn fib(n: usize) -> BigInt;
@@ -32,4 +33,10 @@ fn main() {
     println!("---------------------------------");
     println!("{}", ZlotoImplementation::fib(30));
     println!("{}", ZlotoImplementation::fac(100));
+
+    println!("---------------------------------");
+    println!("{}", common::FaultTolerantMagicFunctions::fib(10));
+    println!("{}", common::FaultTolerantMagicFunctions::fac(10));
+
+
 }
