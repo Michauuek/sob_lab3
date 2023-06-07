@@ -8,11 +8,11 @@ pub struct ZlotoImplementation;
 impl MagicFunctions for ZlotoImplementation {
     fn fib(n: usize) -> BigInt {
         // fibbonaci using golder ratio algorithm
-        const PHI: f64 = 1.61803398874989484820458683436563811772030917980576286213544862270526046281890_f64;
+        const PHI: f64 = 1.618_033_988_749_895_f64;
 
-        let fib = ((PHI.powi(n as i32) - (-PHI).powi(-(n as i32))) / 5.0_f64.sqrt()).to_bigint().unwrap();
+        
 
-        fib 
+        ((PHI.powi(n as i32) - (-PHI).powi(-(n as i32))) / 5.0_f64.sqrt()).to_bigint().unwrap() 
     }
 
     fn fac(n: usize) -> BigInt {
