@@ -23,7 +23,7 @@ impl MagicFunctions for RzemiImplementation {
             }
     
             let result = if n < 2 {
-                1.to_bigint().unwrap()
+                n.to_bigint().unwrap()
             } else {
                 Self::fib(n - 2) + Self::fib(n - 1)
             };
