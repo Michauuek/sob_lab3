@@ -24,11 +24,11 @@ fn vote<const N: usize>(handles: [JoinHandle<BigInt>; N]) -> BigInt {
 
     match sorted_counts.len() {
         1 => sorted_counts[0].0.clone(),
-        2 => {
+        n if n >= N => panic!("Rabini są niezdecydowani: {:?}", sorted_counts),
+        _ => {
             println!("Warning: One of the implementations returned a different result: {:?}", sorted_counts);
             sorted_counts[0].0.clone()
         }
-        _ => panic!("All implementations returned different results: {:?}", sorted_counts),
     }
 }
 
