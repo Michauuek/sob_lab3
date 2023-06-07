@@ -46,12 +46,12 @@ fn common_fib_benchmark(c: &mut Criterion) {
 // Define the benchmark group
 criterion_group!(
     benches,
-    // rzemi_fib_benchmark,
-    // swist_fib_benchmark,
-    // zlot_fib_benchmark,
-    // rzemi_fac_benchmark,
-    // swist_fac_benchmark,
-    // zlot_fac_benchmark,
+    rzemi_fib_benchmark,
+    swist_fib_benchmark,
+    zlot_fib_benchmark,
+    rzemi_fac_benchmark,
+    swist_fac_benchmark,
+    zlot_fac_benchmark,
     common_fac_benchmark,
     common_fib_benchmark
 );
